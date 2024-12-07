@@ -3,6 +3,8 @@ services:
     build:
       context: ./
       dockerfile: php82.dockerfile
+    env_file:
+      .env
     volumes:
       - ./src:/usr/local/opnsense
       - ./config.xml.sample:/conf/config.xml
